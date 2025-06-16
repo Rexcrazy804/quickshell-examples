@@ -1,7 +1,6 @@
 pragma ComponentBehavior: Bound
 import QtQuick
 import QtQuick.Layouts
-import Quickshell.Hyprland
 import Quickshell.Services.UPower
 
 import "../Data/" as Dat

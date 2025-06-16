@@ -1,10 +1,7 @@
 import QtQuick
 import QtQuick.Layouts
-import Quickshell
 import Quickshell.Wayland
-
 import "../Data/" as Dat
-import "../Generics/" as Gen
 
 Rectangle {
   id: root
