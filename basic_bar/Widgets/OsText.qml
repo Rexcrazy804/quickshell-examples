@@ -20,6 +20,7 @@ Rectangle {
       font.family: Dat.Fonts.caskaydia
       text: "󱄅"
     }
+
     text {
       color: Dat.Colors.tertiary
       text: "NixOS"

@@ -7,12 +7,16 @@ import Quickshell.Services.Pipewire
 Singleton {
   id: root
 
+  function getIcon(node: PwNode): string {
+    return (node.isSink) ? getSinkIcon(node) : getSourceIcon(node);
+  }
+
   function getSinkIcon(node: PwNode): string {
-    return (node.muted) ? "󰝟" : (node.volume > 0.5) ? "󰕾" : (node.volume > 0.01) ? "󰖀" : "󰕿";
+    return (node.audio.muted) ? "󰝟" : (node.audio.volume > 0.5) ? "󰕾" : (node.audio.volume > 0.01) ? "󰖀" : "󰕿";
   }
 
   function getSourceIcon(node: PwNode): string {
-    return (node.muted) ? "󰍭" : "󰍬";
+    return (node.audio.muted) ? "󰍭" : "󰍬";
   }
 
   function toggleMute(node: PwNode) {
@@ -29,7 +33,7 @@ Singleton {
     if (node.audio.volume > 1.3) {
       node.audio.volume = 1.3;
     }
-    if (root.sink.audio.volume < 0) {
+    if (node.audio.volume < 0) {
       node.audio.volume = 0.0;
     }
   }

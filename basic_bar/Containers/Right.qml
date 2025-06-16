@@ -1,5 +1,6 @@
 import QtQuick
 import QtQuick.Layouts
+import Quickshell.Services.Pipewire
 import "../Widgets/" as Wid
 
 Item {
@@ -13,6 +14,13 @@ Item {
     }
 
     Wid.PowerProfs {
+    }
+
+    Wid.Sound {
+    }
+
+    Wid.Sound {
+      node: Pipewire.defaultAudioSource
     }
   }
 }
