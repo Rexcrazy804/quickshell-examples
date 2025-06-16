@@ -22,5 +22,8 @@ Item {
     Wid.Sound {
       node: Pipewire.defaultAudioSource
     }
+
+    Wid.Battery {
+    }
   }
 }
